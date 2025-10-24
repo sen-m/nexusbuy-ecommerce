@@ -11,7 +11,30 @@ public class Category {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     @Column(name="category_name")
-    private @NotBlank  String categoryName;
+    private @NotBlank String categoryName;
     private @NotBlank String description;
     private @NotBlank String imageUrl;
+
+    public Category() {}
+
+    public Category(@NotBlank String categoryName,
+                    @NotBlank String description,
+                    @NotBlank String imageUrl
+                    ) {
+        this.categoryName = categoryName;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getCategoryName() {
+        return this.categoryName;
+    }
+
+    public  String getDescription() {
+        return this.description;
+    }
+
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
 }
