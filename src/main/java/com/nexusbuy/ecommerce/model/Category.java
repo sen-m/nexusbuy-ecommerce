@@ -30,11 +30,23 @@ public class Category {
         return this.categoryName;
     }
 
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public  String getDescription() {
         return this.description;
     }
 
+    public  void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
